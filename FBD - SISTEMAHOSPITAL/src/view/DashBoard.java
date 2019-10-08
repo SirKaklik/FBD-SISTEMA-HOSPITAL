@@ -91,7 +91,7 @@ public class DashBoard extends JFrame {
 		funcionarioBttn = new JButton("Funcionario");
 		consultaBttn = new JButton("Consulta");
 		triagemBttn = new JButton("Triagem");
-		pacientesBttn = new JButton("Paciente");
+		pacientesBttn = new JButton("Pacientes");
 		laudoBttn = new JButton("Laudo");
 		
 		funcionariosDisponiveisLabel = new JLabel("Enfermeiras disponiveis:");

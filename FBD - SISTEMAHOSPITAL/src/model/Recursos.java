@@ -4,7 +4,7 @@ import javax.swing.ImageIcon;
 
 public class Recursos {
 
-	ImageIcon loginBonecoIcon, tempM, tempR, hosptZin, fundoBoard;
+	ImageIcon loginBonecoIcon, tempM, tempR, hosptZin, fundoBoard, telaPaciente, telaConsulta, telaLaudo, telaTriagem, coresHelp;
 	
 	public Recursos() {
 		
@@ -13,6 +13,12 @@ public class Recursos {
 		tempR = new ImageIcon(getClass().getResource("/tempR.png"));
 		hosptZin = new ImageIcon(getClass().getResource("/hosptzin.png"));
 		fundoBoard = new ImageIcon(getClass().getResource("/fundoBoard.jpg"));
+		
+		telaPaciente = new ImageIcon(getClass().getResource("/telaPaciente.png"));
+		telaConsulta = new ImageIcon(getClass().getResource("/telaConsulta.png"));
+		telaLaudo = new ImageIcon(getClass().getResource("/telaLaudo.png"));
+		telaTriagem = new ImageIcon(getClass().getResource("/telaTriagem.png"));
+		coresHelp = new ImageIcon(getClass().getResource("/Cores.png"));
 	}
 
 	public ImageIcon getLoginBonecoIcon() {
@@ -33,6 +39,26 @@ public class Recursos {
 
 	public ImageIcon getFundoBoard() {
 		return fundoBoard;
+	}
+
+	public ImageIcon getTelaPaciente() {
+		return telaPaciente;
+	}
+
+	public ImageIcon getTelaConsulta() {
+		return telaConsulta;
+	}
+
+	public ImageIcon getTelaLaudo() {
+		return telaLaudo;
+	}
+
+	public ImageIcon getTelaTriagem() {
+		return telaTriagem;
+	}
+
+	public ImageIcon getCoresHelp() {
+		return coresHelp;
 	}
 	
 }
