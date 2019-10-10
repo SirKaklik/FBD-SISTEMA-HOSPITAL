@@ -2,11 +2,13 @@ package controll;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.ParseException;
 
 import javax.swing.UnsupportedLookAndFeelException;
 
 import model.Recursos;
 import view.DashBoard;
+import view.TelaConsulta;
 import view.TelaLogin;
 import view.TelaPacientes;
 
@@ -16,18 +18,25 @@ public class Controller implements ActionListener {
 	private Recursos rec;
 	private DashBoard board;
 	private TelaPacientes telaPac;
+	private TelaConsulta telaCon;
 	
-	public Controller() throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException {
+	public Controller() throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException, ParseException {
 		telaLogin = new TelaLogin();
 		board = new DashBoard();
 		telaPac = new TelaPacientes();
+		telaCon = new TelaConsulta();
 		rec = new Recursos();
 		montarTelaLogin();
 		montarTelaDashBoard();
 		montarTelaPaciente();
+		montarTelaConsulta();
 		control();
 		
 		
+	}
+	
+	private void montarTelaConsulta() {
+		telaCon.getFundoLabel().setIcon(rec.getTelaConsulta());
 	}
 	
 	private void montarTelaDashBoard() {

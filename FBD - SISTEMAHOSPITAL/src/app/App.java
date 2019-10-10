@@ -1,5 +1,7 @@
 package app;
 
+import java.text.ParseException;
+
 import javax.swing.UnsupportedLookAndFeelException;
 
 import controll.Controller;
@@ -9,7 +11,7 @@ public class App {
 		try {
 			new Controller();
 		} catch (ClassNotFoundException | InstantiationException | IllegalAccessException
-				| UnsupportedLookAndFeelException e) {
+				| UnsupportedLookAndFeelException | ParseException e) {
 			
 			e.printStackTrace();
 		}
