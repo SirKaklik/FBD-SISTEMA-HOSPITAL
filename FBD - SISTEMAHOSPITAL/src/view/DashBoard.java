@@ -28,6 +28,7 @@ public class DashBoard extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLayout(null);
 		UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
+		setResizable(false);
 		fundoLabel = new JLabel();
 		setContentPane(fundoLabel);
 		

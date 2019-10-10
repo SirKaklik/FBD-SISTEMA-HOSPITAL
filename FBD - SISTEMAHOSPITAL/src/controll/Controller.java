@@ -11,6 +11,7 @@ import view.DashBoard;
 import view.TelaConsulta;
 import view.TelaLogin;
 import view.TelaPacientes;
+import view.TelaTriagem;
 
 public class Controller implements ActionListener {
 
@@ -19,20 +20,27 @@ public class Controller implements ActionListener {
 	private DashBoard board;
 	private TelaPacientes telaPac;
 	private TelaConsulta telaCon;
+	private TelaTriagem telaTri;
 	
 	public Controller() throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException, ParseException {
 		telaLogin = new TelaLogin();
 		board = new DashBoard();
 		telaPac = new TelaPacientes();
 		telaCon = new TelaConsulta();
+		telaTri = new TelaTriagem();
 		rec = new Recursos();
 		montarTelaLogin();
 		montarTelaDashBoard();
 		montarTelaPaciente();
 		montarTelaConsulta();
+		montarTelaTriagem();
 		control();
 		
 		
+	}
+	
+	private void montarTelaTriagem() {
+		telaTri.getFundoLabel().setIcon(rec.getTelaTriagem());
 	}
 	
 	private void montarTelaConsulta() {
