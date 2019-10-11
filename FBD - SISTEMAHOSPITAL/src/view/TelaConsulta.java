@@ -5,6 +5,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import javax.swing.ButtonGroup;
+import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JComponent;
 import javax.swing.JFormattedTextField;
@@ -25,10 +26,11 @@ public class TelaConsulta extends JFrame{
 	private JTextArea queixa;
 	private ButtonGroup group;
 	private JComboBox<String> estados, ano, mes, dia;
+	private JButton salvarBttn, cancelarBttn, limparBttn;
 
 	public TelaConsulta() throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException, ParseException {
 		super("Consulta");
-		setSize(530, 400);
+		setSize(520, 400);
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLayout(null);
@@ -38,40 +40,40 @@ public class TelaConsulta extends JFrame{
 		setContentPane(fundoLabel);
 		
 		idLabel = new JLabel("");
-		idLabel.setBounds(250, 0, 150, 30);
+		idLabel.setBounds(250, 2, 150, 30);
 		
 		nome = new JTextField();
-		nome.setBounds(39, 34, 300, 25);
+		nome.setBounds(39, 38, 300, 25);
 		
 		rua = new JTextField();
-		rua.setBounds(65, 62, 215, 25);
+		rua.setBounds(65, 66, 215, 25);
 		
 		numero = new JTextField();
-		numero.setBounds(301, 62, 55, 25);
+		numero.setBounds(301, 66, 55, 25);
 		
 		municipio = new JTextField();
-		municipio.setBounds(45, 90, 165, 25);
+		municipio.setBounds(45, 94, 165, 25);
 		
 		telef = new JFormattedTextField();
-		telef.setBounds(30, 115, 80, 25);
+		telef.setBounds(30, 119, 80, 25);
 		
 		CEP = new JTextField();
-		CEP.setBounds(138, 115, 75, 25);
+		CEP.setBounds(138, 119, 75, 25);
 		
 		ano = new JComboBox<String>();
 		mes = new JComboBox<String>();
 		dia = new JComboBox<String>();
-		dia.setBounds(118, 142, 52, 25);
-		mes.setBounds(198, 142, 52, 25);
-		ano.setBounds(285, 142, 80, 25);
+		dia.setBounds(118, 146, 52, 25);
+		mes.setBounds(198, 146, 52, 25);
+		ano.setBounds(285, 146, 80, 25);
 		
 		estados = new JComboBox<String>();
-		estados.setBounds(240, 90, 52, 25);
+		estados.setBounds(240, 94, 52, 25);
 		
 		masculino = new JRadioButton();
-		masculino.setBounds(10, 190, 20, 20);
+		masculino.setBounds(10, 194, 20, 20);
 		feminino = new JRadioButton();
-		feminino.setBounds(58, 190, 20, 20);
+		feminino.setBounds(58, 194, 20, 20);
 		
 		group = new ButtonGroup();
 		group.add(masculino);
@@ -80,7 +82,14 @@ public class TelaConsulta extends JFrame{
 		queixa = new JTextArea();
 		queixa.setLineWrap(true);
 		queixa.setWrapStyleWord(true);
-		queixa.setBounds(8, 244, 495, 40);
+		queixa.setBounds(8, 248, 495, 40);
+		
+		salvarBttn = new JButton("Salvar");
+		salvarBttn.setBounds(100, 300, 100, 30);
+		cancelarBttn = new JButton("Cancelar");
+		cancelarBttn.setBounds(200, 300, 100, 30);
+		limparBttn = new JButton("Limpar");
+		limparBttn.setBounds(300, 300, 100, 30);
 		
 		//////////////////////////////////////
 		add(idLabel);
@@ -97,7 +106,9 @@ public class TelaConsulta extends JFrame{
 		add(masculino);
 		add(feminino);
 		add(queixa);
-		
+		add(salvarBttn);
+		add(cancelarBttn);
+		add(limparBttn);
 		
 		
 		
@@ -168,5 +179,17 @@ public class TelaConsulta extends JFrame{
 
 	public JComboBox<String> getDia() {
 		return dia;
+	}
+
+	public JButton getSalvarBttn() {
+		return salvarBttn;
+	}
+
+	public JButton getCancelarBttn() {
+		return cancelarBttn;
+	}
+
+	public JButton getLimparBttn() {
+		return limparBttn;
 	}
 }

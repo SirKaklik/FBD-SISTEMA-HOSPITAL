@@ -4,6 +4,7 @@ import java.awt.Color;
 
 import javax.swing.BorderFactory;
 import javax.swing.ButtonGroup;
+import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -20,6 +21,7 @@ public class TelaTriagem extends JFrame {
 	private JTextArea problemas, alergia;
 	private JRadioButton vermelho, laranja, amarelo, verde, azul;
 	private ButtonGroup group;
+	private JButton salvarBttn, cancelarBttn, limparBttn;
 	
 	private JLabel fundoLabel;
 
@@ -65,6 +67,13 @@ public class TelaTriagem extends JFrame {
 		group.add(amarelo);
 		group.add(azul);
 		
+		salvarBttn = new JButton("Salvar");
+		salvarBttn.setBounds(100, 300, 100, 30);
+		cancelarBttn = new JButton("Cancelar");
+		cancelarBttn.setBounds(200, 300, 100, 30);
+		limparBttn = new JButton("Limpar");
+		limparBttn.setBounds(300, 300, 100, 30);
+		
 		tipoSang = new JComboBox<String>();
 		tipoSang.setBounds(405, 170, 50, 30);
 		
@@ -77,11 +86,66 @@ public class TelaTriagem extends JFrame {
 		add(verde);
 		add(amarelo);
 		add(azul);
+		add(salvarBttn);
+		add(cancelarBttn);
+		add(limparBttn);
 		
 		setVisible(true);
 	}
 
 	public JLabel getFundoLabel() {
 		return fundoLabel;
+	}
+
+	public JComboBox<String> getTipoSang() {
+		return tipoSang;
+	}
+
+	public JTextField getId() {
+		return id;
+	}
+
+	public JTextArea getProblemas() {
+		return problemas;
+	}
+
+	public JTextArea getAlergia() {
+		return alergia;
+	}
+
+	public JRadioButton getVermelho() {
+		return vermelho;
+	}
+
+	public JRadioButton getLaranja() {
+		return laranja;
+	}
+
+	public JRadioButton getAmarelo() {
+		return amarelo;
+	}
+
+	public JRadioButton getVerde() {
+		return verde;
+	}
+
+	public JRadioButton getAzul() {
+		return azul;
+	}
+
+	public ButtonGroup getGroup() {
+		return group;
+	}
+
+	public JButton getSalvarBttn() {
+		return salvarBttn;
+	}
+
+	public JButton getCancelarBttn() {
+		return cancelarBttn;
+	}
+
+	public JButton getLimparBttn() {
+		return limparBttn;
 	}
 }
