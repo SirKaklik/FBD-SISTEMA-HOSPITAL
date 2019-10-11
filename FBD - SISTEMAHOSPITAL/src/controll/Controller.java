@@ -9,6 +9,7 @@ import javax.swing.UnsupportedLookAndFeelException;
 import model.Recursos;
 import view.DashBoard;
 import view.TelaConsulta;
+import view.TelaFuncionario;
 import view.TelaLaudo;
 import view.TelaLogin;
 import view.TelaPacientes;
@@ -23,6 +24,7 @@ public class Controller implements ActionListener {
 	private TelaConsulta telaCon;
 	private TelaTriagem telaTri;
 	private TelaLaudo telaLaudo;
+	private TelaFuncionario telaFunc;
 	
 	public Controller() throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException, ParseException {
 		telaLogin = new TelaLogin();
@@ -31,6 +33,7 @@ public class Controller implements ActionListener {
 		telaCon = new TelaConsulta();
 		telaTri = new TelaTriagem();
 		telaLaudo = new TelaLaudo();
+		telaFunc = new TelaFuncionario();
 		rec = new Recursos();
 		montarTelaLogin();
 		montarTelaDashBoard();
@@ -38,10 +41,15 @@ public class Controller implements ActionListener {
 		montarTelaConsulta();
 		montarTelaTriagem();
 		montartelaLaudo();
+		montarTelaFuncionario();
 		control();
 		
 		
 	}
+	private void montarTelaFuncionario() {
+		telaFunc.getFundoLabel().setIcon(rec.getTelaFuncionario());
+	}
+	
 	private void montartelaLaudo() {
 		telaLaudo.getFundoLabel().setIcon(rec.getTelaLaudo());
 	}
