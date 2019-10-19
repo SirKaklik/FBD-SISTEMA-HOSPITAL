@@ -26,7 +26,6 @@ public class TelaLogin extends JFrame {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLayout(null);
 		setResizable(false);
-		UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
 		
 		bonecoLabel = new JLabel();
 		bonecoLabel.setBounds(20, 10, 137, 145);

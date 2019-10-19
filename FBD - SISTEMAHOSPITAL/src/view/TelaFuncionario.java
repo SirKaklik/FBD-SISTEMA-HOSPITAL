@@ -19,7 +19,6 @@ public class TelaFuncionario extends JFrame{
 		setLocationRelativeTo(null);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLayout(null);
-		UIManager.setLookAndFeel("javax.swing.plaf.nimbus.NimbusLookAndFeel");
 		setResizable(false);
 		fundoLabel = new JLabel();
 		setContentPane(fundoLabel);
