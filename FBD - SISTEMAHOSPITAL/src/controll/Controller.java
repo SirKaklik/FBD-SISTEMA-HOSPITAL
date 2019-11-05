@@ -82,12 +82,96 @@ public class Controller implements ActionListener {
 	private void control() {
 		telaLogin.getAceitarBttn().addActionListener(this);
 		telaLogin.getSairBttn().addActionListener(this);
+		board.getVoltarBttn().addActionListener(this);
+		board.getFuncionarioBttn().addActionListener(this);
+		board.getConsultaBttn().addActionListener(this);
+		board.getTriagemBttn().addActionListener(this);
+		board.getPacientesBttn().addActionListener(this);
+		board.getLaudoBttn().addActionListener(this);
 	}
 
 	
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource().equals(telaLogin.getSairBttn())) {
 			System.exit(0);
+		}
+		if(e.getSource().equals(telaLogin.getAceitarBttn())) {
+			if(telaLogin.getLoginField().getText().equalsIgnoreCase("0")) {
+				board.getOpsPanel().add(board.getTriagemBttn());
+				board.getOpsPanel().add(board.getLaudoBttn());
+				board.getOpsPanel().add(board.getFuncionarioBttn());
+				board.getOpsPanel().add(board.getPacientesBttn());
+				board.getOpsPanel().add(board.getConsultaBttn());
+				board.getOpsPanel().add(board.getVoltarBttn());
+				board.revalidate();
+				board.repaint();
+				telaLogin.setVisible(false);
+				board.setVisible(true);
+			}
+			if(telaLogin.getLoginField().getText().equalsIgnoreCase("1")) {
+				board.getOpsPanel().remove(board.getTriagemBttn());
+				board.getOpsPanel().remove(board.getConsultaBttn());
+				board.getOpsPanel().add(board.getLaudoBttn());
+				board.getOpsPanel().add(board.getFuncionarioBttn());
+				board.getOpsPanel().add(board.getPacientesBttn());
+				board.getOpsPanel().add(board.getVoltarBttn());
+				board.revalidate();
+				board.repaint();
+				telaLogin.setVisible(false);
+				board.setVisible(true);
+			}
+			if(telaLogin.getLoginField().getText().equalsIgnoreCase("2")) {
+				board.getOpsPanel().remove(board.getConsultaBttn());
+				board.getOpsPanel().remove(board.getLaudoBttn());
+				board.getOpsPanel().add(board.getTriagemBttn());
+				board.getOpsPanel().add(board.getFuncionarioBttn());
+				board.getOpsPanel().add(board.getPacientesBttn());
+				board.getOpsPanel().add(board.getVoltarBttn());
+				board.revalidate();
+				board.repaint();
+				telaLogin.setVisible(false);
+				board.setVisible(true);
+			}
+			if(telaLogin.getLoginField().getText().equalsIgnoreCase("3")) {
+				board.getOpsPanel().remove(board.getTriagemBttn());
+				board.getOpsPanel().remove(board.getLaudoBttn());
+				board.getOpsPanel().add(board.getFuncionarioBttn());
+				board.getOpsPanel().add(board.getPacientesBttn());
+				board.getOpsPanel().add(board.getConsultaBttn());
+				board.getOpsPanel().add(board.getVoltarBttn());
+				board.revalidate();
+				board.repaint();
+				telaLogin.setVisible(false);
+				board.setVisible(true);
+			}
+		
+		}
+		if(e.getSource().equals(board.getVoltarBttn())) {
+			telaLogin.getLoginField().setText("");
+			telaLogin.getSenhaField().setText("");
+			board.setVisible(false);
+			telaLogin.setVisible(true);
+			
+		}
+		if(e.getSource().equals(board.getFuncionarioBttn())) {
+			telaFunc.setVisible(true);
+			
+		}
+		if(e.getSource().equals(board.getLaudoBttn())) {
+			telaLaudo.setVisible(true);
+			
+		}
+		if(e.getSource().equals(board.getPacientesBttn())) {
+			telaPac.setVisible(true);
+			
+		}
+		if(e.getSource().equals(board.getConsultaBttn())) {
+			telaCon.setVisible(true);
+			
+		}
+		if(e.getSource().equals(board.getTriagemBttn())) {
+			telaTri.setVisible(true);
+			
 		}
 		
 	}

@@ -22,7 +22,7 @@ public class TelaPacientes extends JFrame{
 		super("Paciente");
 		setSize(520, 400);
 		setLocationRelativeTo(null);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setLayout(null);
 		setResizable(false);
 		fundoLabel = new JLabel();
@@ -69,7 +69,7 @@ public class TelaPacientes extends JFrame{
 		add(xLabel);
 		add(voltarBttn);
 	
-		setVisible(true);
+		setVisible(false);
 		
 	}
 

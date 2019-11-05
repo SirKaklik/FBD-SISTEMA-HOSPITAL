@@ -32,7 +32,7 @@ public class TelaConsulta extends JFrame{
 		super("Consulta");
 		setSize(520, 400);
 		setLocationRelativeTo(null);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setLayout(null);
 		setResizable(false);
 		fundoLabel = new JLabel();
@@ -111,7 +111,7 @@ public class TelaConsulta extends JFrame{
 		
 		
 		
-		setVisible(true);
+		setVisible(false);
 		
 		
 	}

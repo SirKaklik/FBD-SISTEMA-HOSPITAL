@@ -17,7 +17,7 @@ public class TelaFuncionario extends JFrame{
 		super("Funcionario Info");
 		setSize(400, 200);
 		setLocationRelativeTo(null);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setLayout(null);
 		setResizable(false);
 		fundoLabel = new JLabel();
@@ -38,7 +38,7 @@ public class TelaFuncionario extends JFrame{
 		add(iD);
 		
 		
-		setVisible(true);
+		setVisible(false);
 	}
 
 	public JButton getVoltarBttn() {

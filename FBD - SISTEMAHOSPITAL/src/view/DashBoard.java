@@ -141,7 +141,7 @@ public class DashBoard extends JFrame {
 		opsPanel.add(voltarBttn);
 		////////////////////////////////////////////////
 		
-		setVisible(true);
+		setVisible(false);
 	}
 
 

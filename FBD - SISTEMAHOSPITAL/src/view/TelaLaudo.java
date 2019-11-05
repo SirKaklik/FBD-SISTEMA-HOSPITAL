@@ -22,7 +22,7 @@ public class TelaLaudo extends JFrame{
 		super("Laudo médico");
 		setSize(520, 400);
 		setLocationRelativeTo(null);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setLayout(null);
 		setResizable(false);
 		fundoLabel = new JLabel();
@@ -69,7 +69,7 @@ public class TelaLaudo extends JFrame{
 		add(cancelarBttn);
 		add(limparBttn);
 		
-		setVisible(true);
+		setVisible(false);
 	}
 
 	public JButton getSalvarBttn() {
