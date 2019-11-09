@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class SQL_Connection {
 
-	public static final String NOME_BD_CONNECTION_POSTGRESS = "POSTGRES";
+	public static final String NOME_BD_CONNECTION_POSTGRESS = "postgres";
 	
 	private static Connection conexao = null;
 	

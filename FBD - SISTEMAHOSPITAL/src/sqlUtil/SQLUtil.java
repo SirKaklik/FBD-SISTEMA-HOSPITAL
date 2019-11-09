@@ -2,7 +2,7 @@ package sqlUtil;
 
 public class SQLUtil {
 
-	public static String URL_POSTGRES = "jdbc:postgresql://localhost:5432/SistemaHospital";
+	public static String URL_POSTGRES = "jdbc:postgresql://localhost:5432/postgres";
 	public static String USUARIO_POSTGRES = "postgres";
 	public static String SENHA_POSTGRES = "123";
 	
