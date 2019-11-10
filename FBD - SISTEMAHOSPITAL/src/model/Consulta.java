@@ -6,6 +6,13 @@ public class Consulta {
 	private String tipo;
 	private int id_paciente;
 	
+	
+	
+	public Consulta(int id) {
+		super();
+		this.id = id;
+	}
+
 	public Consulta(String tipo, int id_paciente) {
 		super();
 		this.tipo = tipo;

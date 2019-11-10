@@ -4,6 +4,13 @@ public class Triagem {
 	private String problema, alergias, tipoSang;
 	private int prioridade, id;
 	
+	
+	
+	public Triagem(int id) {
+		super();
+		this.id = id;
+	}
+
 	public Triagem(String problema, String alergias, String tipoSang, int prioridade) {
 		super();
 		this.problema = problema;

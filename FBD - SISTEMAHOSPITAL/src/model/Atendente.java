@@ -5,6 +5,12 @@ public class Atendente {
 	private Integer id;
 	private String cpf, rg, nome;
 	
+	
+	public Atendente(Integer id) {
+		super();
+		this.id = id;
+	}
+
 	public Atendente(String cpf, String rg, String nome) {
 		super();
 		this.cpf = cpf;

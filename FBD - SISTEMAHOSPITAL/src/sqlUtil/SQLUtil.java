@@ -1,5 +1,7 @@
 package sqlUtil;
 
+import java.sql.Date;
+
 public class SQLUtil {
 
 	public static String URL_POSTGRES = "jdbc:postgresql://localhost:5432/postgres";
@@ -7,82 +9,87 @@ public class SQLUtil {
 	public static String SENHA_POSTGRES = "123";
 	
 	public static class Paciente{
-		private static String NOME_TABELA = "aluno";
+		private static String NOME_TABELA = "paciente";
 		private static String COL_NOME = "nome";
 		private static String COL_CPF = "cpf";
+		private static String COL_RG = "rg";
+		private static String COL_RUA = "rua";
+		private static String COL_NUMERO = "numero";
+		private static String COL_MUNICIPIO = "municipio";
+		private static String COL_TELEFONE = "telefone";
+		private static String COL_SEXO = "sexo";
+		private static String COL_DATA_NASCIMENTO = "datanascimento";
+		private static String COL_ORG_EXP = "orgaoexpedidor";
+		private static String COL_SUS = "sus";
+		private static String COL_QUEIXA = "queixa"; 
+			
+		public static String INSERT_ALL = "INSERT INTO "+ NOME_TABELA +" ("+ COL_NOME + "," +COL_DATA_NASCIMENTO+ "," +COL_TELEFONE+ "," +COL_ORG_EXP+
+				"," +COL_MUNICIPIO+ "," +COL_RG+ "," +COL_CPF+ "," +COL_CPF+ "," +COL_SUS+ "," +COL_RUA+ "," +COL_NUMERO+ 
+				"," +COL_SEXO+  "," +COL_QUEIXA+") values (?,?,?,?,?,?,?,?,?,?,?,?)";
 		
-		public static String INSERT_ALL = "INSERT INTO "+ NOME_TABELA +" ("+ COL_NOME + "," +COL_CPF+ ") values (?,?)";
+	    public static String SELECT_BY_ID =  "SELECT p.id, p.nome, p.cpf, p.rg, p.rua, p.numero, p.municipio, p.telefone, p.sexo, p.datanascimento,"
+	    		+ "p.orgaoexpedidor, p.sus, p.queixa FROM "+
+	                NOME_TABELA+" p WHERE ID = ?"+" as p;";
+	    
+	    public static String SELECT_ALL =  "SELECT p.id, p.nome, p.cpf, p.rg, p.rua, p.numero, p.municipio, p.telefone, p.sexo, p.datanascimento,"
+	    	    		+ "p.orgaoexpedidor, p.sus, p.queixa FROM "+ NOME_TABELA+" as p;";
 	}
 	
 	public static class Consulta{
-
+		private static String NOME_TABELA = "consulta";
+		private static String COL_TIPO = "tipo";
+		private static String COL_ID_PACIENTE = "id_paciente";
+		
+		public static String INSERT_ALL = "INSERT INTO "+ NOME_TABELA +" ("+ COL_TIPO + "," +COL_ID_PACIENTE+ ") values (?,?)";
+		
+	    public static String SELECT_BY_ID =  "SELECT p.id, p.tipo, p.id_paciente FROM "+
+	                NOME_TABELA+" a WHERE ID = ?"+" as p;";
+	    
+	    public static String SELECT_ALL =  "SELECT a.id, a.tipo, a.id_paciente FROM "+
+                NOME_TABELA+" as a;";
 	}
 	
 	public static class Atendente{
-
+		private static String NOME_TABELA = "atendente";
+		private static String COL_NOME = "nome";
+		private static String COL_CPF = "cpf";
+		private static String COL_RG = "rg";
+		
+		public static String INSERT_ALL = "INSERT INTO "+ NOME_TABELA +" ("+COL_CPF+ "," +COL_RG+ "," + COL_NOME + ") values (?,?,?)";
+		
+	    public static String SELECT_BY_ID =  "SELECT p.id, p.nome, p.cpf, p.rg FROM "+
+	                NOME_TABELA+" a WHERE ID = ?"+" as p;";
+	    public static String SELECT_ALL =  "SELECT a.id, a. nome, a.cpf, a.rg FROM "+
+                NOME_TABELA+" as a;";
 	}
 	
 	public static class Auxiliares{
-
+		private static String NOME_TABELA = "auxiliares";
+		private static String COL_NOME = "nome";
+		private static String COL_CPF = "cpf";
+		private static String COL_RG = "rg";
+		
+		public static String INSERT_ALL = "INSERT INTO "+ NOME_TABELA +" ("+COL_CPF+ "," +COL_RG+ "," + COL_NOME + ") values (?,?,?)";
+		
+	    public static String SELECT_BY_ID =  "SELECT p.id, p.nome, p.cpf, p.rg FROM "+
+	                NOME_TABELA+" a WHERE ID = ?"+" as p;";
+	    public static String SELECT_ALL =  "SELECT a.id, a. nome, a.cpf, a.rg FROM "+
+                NOME_TABELA+" as a;";
 	}
 	
-	public static class Cirurgia{
-
-	}
-	
-	public static class Farmaceutico{
-
-	}
-	
-	public static class Farmacia{
-
-	}
-	
-	public static class Medicamento{
-
-	}
-	
-	public static class FichaPaciente{
-
-	}
-	
-	public static class Garagem{
-
-	}
-	
-	public static class Transferencia{
-
-	}
-	
-	public static class Hospital{
-
-	}
-	
-	public static class Laboratorio{
-
-	}
 	
 	public static class Medico{
-
+		private static String NOME_TABELA = "medico";
+		private static String COL_NOME = "nome";
+		private static String COL_ESPECIALIDADE = "especialidade";
+		private static String COL_TELEFONE = "telefone";
+		
+		public static String INSERT_ALL = "INSERT INTO "+ NOME_TABELA +" ("+COL_NOME+ "," +COL_ESPECIALIDADE+ "," + COL_TELEFONE+ ") values (?,?,?)";
+		
+	    public static String SELECT_BY_ID =  "SELECT p.id, p.nome, p.especialidade, p.telefone FROM "+
+	                NOME_TABELA+" a WHERE ID = ?"+" as p;";
+	    public static String SELECT_ALL =  "SELECT a.id, a. nome, a.especialidade, a.telefone FROM "+
+                NOME_TABELA+" as a;";
 	}
 	
-	public static class Plantao{
-
-	}
-	
-	public static class Aluno{
-
-	}
-	
-	public static class Prefeitura{
-
-	}
-	
-	public static class SalaCirurgia{
-
-	}
-	
-	public static class Triagem{
-
-	}
 }

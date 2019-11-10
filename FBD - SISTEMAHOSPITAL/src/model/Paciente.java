@@ -4,10 +4,17 @@ import java.sql.Date;
 
 public class Paciente {
 
-	private String nome, rua, telefone, orgExp, municipio, cpf, rg, sus, sexo, queixa;
+	private String nome, rua, telefone, orgExp, municipio, cpf, rg, sus, sexo, queixa, prioridade;
 	private Date data_nascimento;
 	private int numero_casa, id;
 	
+	
+	
+	public Paciente(int id) {
+		super();
+		this.id = id;
+	}
+
 	public Paciente(String nome, String rua, String telefone, String orgExp, String municipio, String cpf, String rg,
 			String sus, String sexo, String queixa, Date data_nascimento, int numero_casa) {
 		super();
@@ -123,6 +130,14 @@ public class Paciente {
 
 	public int getId() {
 		return id;
+	}
+
+	public String getPrioridade() {
+		return prioridade;
+	}
+
+	public void setPrioridade(String prioridade) {
+		this.prioridade = prioridade;
 	}
 	
 	

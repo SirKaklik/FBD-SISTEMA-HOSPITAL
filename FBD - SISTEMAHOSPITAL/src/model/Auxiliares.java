@@ -5,6 +5,13 @@ public class Auxiliares {
 	private Integer id;
 	private String cpf, rg, nome;
 	
+	
+	
+	public Auxiliares(Integer id) {
+		super();
+		this.id = id;
+	}
+
 	public Auxiliares(String cpf, String rg, String nome) {
 		super();
 		this.cpf = cpf;

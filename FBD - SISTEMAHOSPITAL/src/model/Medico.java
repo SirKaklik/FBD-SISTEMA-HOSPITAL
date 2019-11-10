@@ -6,6 +6,13 @@ public class Medico {
 	private String especialidade, telefone, nome;
 	private String cpf, rg;
 	
+	
+	
+	public Medico(Integer id) {
+		super();
+		this.id = id;
+	}
+
 	public Medico(String especialidade, String telefone, String nome, String cpf, String rg) {
 		super();
 		this.especialidade = especialidade;
