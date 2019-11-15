@@ -13,13 +13,12 @@ public class Medico {
 		this.id = id;
 	}
 
-	public Medico(String especialidade, String telefone, String nome, String cpf, String rg) {
+	public Medico(String especialidade, String telefone, String nome) {
 		super();
 		this.especialidade = especialidade;
 		this.telefone = telefone;
 		this.nome = nome;
-		this.cpf = cpf;
-		this.rg = rg;
+
 	}
 	
 	public String getEspecialidade() {

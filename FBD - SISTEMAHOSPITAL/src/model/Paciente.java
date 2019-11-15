@@ -5,7 +5,7 @@ import java.sql.Date;
 public class Paciente {
 
 	private String nome, rua, telefone, orgExp, municipio, cpf, rg, sus, sexo, queixa, prioridade;
-	private Date data_nascimento;
+	private String data_nascimento;
 	private int numero_casa, id;
 	
 	
@@ -16,7 +16,7 @@ public class Paciente {
 	}
 
 	public Paciente(String nome, String rua, String telefone, String orgExp, String municipio, String cpf, String rg,
-			String sus, String sexo, String queixa, Date data_nascimento, int numero_casa) {
+			String sus, String sexo, String queixa, String data_nascimento, int numero_casa) {
 		super();
 		this.nome = nome;
 		this.rua = rua;
@@ -112,11 +112,11 @@ public class Paciente {
 		this.queixa = queixa;
 	}
 
-	public Date getData_nascimento() {
+	public String getData_nascimento() {
 		return data_nascimento;
 	}
 
-	public void setData_nascimento(Date data_nascimento) {
+	public void setData_nascimento(String data_nascimento) {
 		this.data_nascimento = data_nascimento;
 	}
 

@@ -1,12 +1,13 @@
 package model.dao;
 
-import java.awt.List;
+import java.util.ArrayList;
 
-import model.Atendente;
+import exceptions.ExceptionGeral;
 import model.Consulta;
 
 public interface IDAOConsulta {
+	
 	public boolean salvarEditar(Consulta consulta);
-	public Consulta buscarID(int id);
-	public List getAll();
+	public Consulta buscarID(int id) throws ExceptionGeral;
+	public ArrayList<Consulta> getAll() throws ExceptionGeral;
 }

@@ -24,7 +24,7 @@ public class SQLUtil {
 		private static String COL_QUEIXA = "queixa"; 
 			
 		public static String INSERT_ALL = "INSERT INTO "+ NOME_TABELA +" ("+ COL_NOME + "," +COL_DATA_NASCIMENTO+ "," +COL_TELEFONE+ "," +COL_ORG_EXP+
-				"," +COL_MUNICIPIO+ "," +COL_RG+ "," +COL_CPF+ "," +COL_CPF+ "," +COL_SUS+ "," +COL_RUA+ "," +COL_NUMERO+ 
+				"," +COL_MUNICIPIO+ "," +COL_RG+ ","+COL_CPF+ "," +COL_SUS+ "," +COL_RUA+ "," +COL_NUMERO+ 
 				"," +COL_SEXO+  "," +COL_QUEIXA+") values (?,?,?,?,?,?,?,?,?,?,?,?)";
 		
 	    public static String SELECT_BY_ID =  "SELECT p.id, p.nome, p.cpf, p.rg, p.rua, p.numero, p.municipio, p.telefone, p.sexo, p.datanascimento,"

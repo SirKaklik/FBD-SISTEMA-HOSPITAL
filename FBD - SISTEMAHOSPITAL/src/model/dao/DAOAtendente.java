@@ -55,7 +55,7 @@ public class DAOAtendente implements IDAOAtendente{
 	            throw new ExceptionGeral("ID INEXISTENTE");
 	        } catch (Exception e) {
 	            e.printStackTrace();
-	            throw new ExceptionGeral("ERRO AO BUSCAR ALUNO - CONTACTER O ADMIN");
+	            throw new ExceptionGeral("Erro: funcionario n„o encontrado.");
 	        }
 	}
 
@@ -78,7 +78,7 @@ public class DAOAtendente implements IDAOAtendente{
             
         } catch (Exception e) {
             e.printStackTrace();
-            throw new ExceptionGeral("Erro: aluno n√£o encontrado.");
+            throw new ExceptionGeral("Erro: funcionario n„o encontrado.");
         }
 	}
 
