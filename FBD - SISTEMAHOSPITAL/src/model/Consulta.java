@@ -3,8 +3,7 @@ package model;
 public class Consulta {
 
 	private int id;
-	private String tipo;
-	private int id_paciente;
+	private String tipo, id_paciente;
 	
 	
 	
@@ -13,7 +12,7 @@ public class Consulta {
 		this.id = id;
 	}
 
-	public Consulta(String tipo, int id_paciente) {
+	public Consulta(String tipo, String id_paciente) {
 		super();
 		this.tipo = tipo;
 		this.id_paciente = id_paciente;
@@ -27,11 +26,11 @@ public class Consulta {
 		this.tipo = tipo;
 	}
 
-	public int getId_paciente() {
+	public String getId_paciente() {
 		return id_paciente;
 	}
 
-	public void setId_paciente(int id_paciente) {
+	public void setId_paciente(String id_paciente) {
 		this.id_paciente = id_paciente;
 	}
 

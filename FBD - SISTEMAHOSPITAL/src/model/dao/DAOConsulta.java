@@ -23,7 +23,7 @@ public class DAOConsulta implements IDAOConsulta{
 			conexao = SQL_Connection.getConnectionInstance();
 			statement = conexao.prepareStatement(SQLUtil.Consulta.INSERT_ALL);
 			statement.setString(1, consulta.getTipo());
-			statement.setLong(2, consulta.getId_paciente());
+			statement.setString(2, consulta.getId_paciente());
 			
 			return statement.execute();
 			
@@ -44,7 +44,7 @@ public class DAOConsulta implements IDAOConsulta{
             Consulta consulta;
             if (result.next()) {
             	String tipo = result.getString(1);
-            	Integer id_paciente = result.getInt(2);
+            	String id_paciente = result.getString(2);
                 consulta = new Consulta(id);
                 consulta.setTipo(tipo);
                 consulta.setId_paciente(id_paciente);
@@ -66,7 +66,7 @@ public class DAOConsulta implements IDAOConsulta{
             result = this.statement.executeQuery();
             Consulta consulta;
             while (result.next()) {
-	                Integer id_paciente = result.getInt(2);
+	                String id_paciente = result.getString(2);
 	                String tipo = result.getString(1);
 	                consulta = new Consulta(tipo, id_paciente);
 	                consultas.add(consulta);

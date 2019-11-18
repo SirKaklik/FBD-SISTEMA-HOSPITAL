@@ -27,11 +27,12 @@ public class SQLUtil {
 				"," +COL_MUNICIPIO+ "," +COL_RG+ ","+COL_CPF+ "," +COL_SUS+ "," +COL_RUA+ "," +COL_NUMERO+ 
 				"," +COL_SEXO+  "," +COL_QUEIXA+") values (?,?,?,?,?,?,?,?,?,?,?,?)";
 		
-	    public static String SELECT_BY_ID =  "SELECT p.id, p.nome, p.cpf, p.rg, p.rua, p.numero, p.municipio, p.telefone, p.sexo, p.datanascimento,"
-	    		+ "p.orgaoexpedidor, p.sus, p.queixa FROM "+
-	                NOME_TABELA+" p WHERE ID = ?"+" as p;";
+	    public static String SELECT_BY_ID =  "SELECT paciente.nome, paciente.datanascimento, paciente.telefone,paciente.orgaoexpedidor,"
+	    		+ "paciente.municipio, paciente.rg, paciente.cpf, paciente.sus, paciente.rua, paciente.numero, "
+	    		+ "paciente.sexo, paciente.queixa FROM "+
+	                NOME_TABELA+" paciente WHERE ID = ?";
 	    
-	    public static String SELECT_ALL =  "SELECT p.id, p.nome, p.cpf, p.rg, p.rua, p.numero, p.municipio, p.telefone, p.sexo, p.datanascimento,"
+	    public static String SELECT_ALL =  "SELECT p.nome, p.cpf, p.rg, p.rua, p.numero, p.municipio, p.telefone, p.sexo, p.datanascimento,"
 	    	    		+ "p.orgaoexpedidor, p.sus, p.queixa FROM "+ NOME_TABELA+" as p;";
 	}
 	
@@ -42,10 +43,10 @@ public class SQLUtil {
 		
 		public static String INSERT_ALL = "INSERT INTO "+ NOME_TABELA +" ("+ COL_TIPO + "," +COL_ID_PACIENTE+ ") values (?,?)";
 		
-	    public static String SELECT_BY_ID =  "SELECT p.id, p.tipo, p.id_paciente FROM "+
-	                NOME_TABELA+" a WHERE ID = ?"+" as p;";
+	    public static String SELECT_BY_ID =  "SELECT consulta.tipo, consulta.id_paciente FROM "+
+	                NOME_TABELA+" consulta WHERE ID = ?";
 	    
-	    public static String SELECT_ALL =  "SELECT a.id, a.tipo, a.id_paciente FROM "+
+	    public static String SELECT_ALL =  "SELECT a.tipo, a.id_paciente FROM "+
                 NOME_TABELA+" as a;";
 	}
 	
@@ -57,9 +58,9 @@ public class SQLUtil {
 		
 		public static String INSERT_ALL = "INSERT INTO "+ NOME_TABELA +" ("+COL_CPF+ "," +COL_RG+ "," + COL_NOME + ") values (?,?,?)";
 		
-	    public static String SELECT_BY_ID =  "SELECT p.id, p.nome, p.cpf, p.rg FROM "+
-	                NOME_TABELA+" a WHERE ID = ?"+" as p;";
-	    public static String SELECT_ALL =  "SELECT a.id, a. nome, a.cpf, a.rg FROM "+
+	    public static String SELECT_BY_ID =  "SELECT atendente.cpf, atendente.rg, atendente.nome FROM "+
+	                NOME_TABELA+" atendente WHERE ID = ?";
+	    public static String SELECT_ALL =  "SELECT a. nome, a.cpf, a.rg FROM "+
                 NOME_TABELA+" as a;";
 	}
 	
@@ -71,9 +72,10 @@ public class SQLUtil {
 		
 		public static String INSERT_ALL = "INSERT INTO "+ NOME_TABELA +" ("+COL_CPF+ "," +COL_RG+ "," + COL_NOME + ") values (?,?,?)";
 		
-	    public static String SELECT_BY_ID =  "SELECT p.id, p.nome, p.cpf, p.rg FROM "+
-	                NOME_TABELA+" a WHERE ID = ?"+" as p;";
-	    public static String SELECT_ALL =  "SELECT a.id, a. nome, a.cpf, a.rg FROM "+
+		public static String SELECT_BY_ID =  "SELECT auxiliares.cpf, auxiliares.rg, auxiliares.nome FROM "+
+                NOME_TABELA+" auxiliares WHERE ID = ?";
+	    
+	    public static String SELECT_ALL =  "SELECT a. nome, a.cpf, a.rg FROM "+
                 NOME_TABELA+" as a;";
 	}
 	
@@ -86,9 +88,9 @@ public class SQLUtil {
 		
 		public static String INSERT_ALL = "INSERT INTO "+ NOME_TABELA +" ("+COL_NOME+ "," +COL_ESPECIALIDADE+ "," + COL_TELEFONE+ ") values (?,?,?)";
 		
-	    public static String SELECT_BY_ID =  "SELECT p.id, p.nome, p.especialidade, p.telefone FROM "+
-	                NOME_TABELA+" a WHERE ID = ?"+" as p;";
-	    public static String SELECT_ALL =  "SELECT a.id, a. nome, a.especialidade, a.telefone FROM "+
+	    public static String SELECT_BY_ID =  "SELECT medico.nome, medico.especialidade, medico.telefone FROM "+
+	                NOME_TABELA+" medico WHERE ID = ?";
+	    public static String SELECT_ALL =  "SELECT a. nome, a.especialidade, a.telefone FROM "+
                 NOME_TABELA+" as a;";
 	}
 	

@@ -4,9 +4,9 @@ import java.sql.Date;
 
 public class Paciente {
 
-	private String nome, rua, telefone, orgExp, municipio, cpf, rg, sus, sexo, queixa, prioridade;
+	private String nome, numero_casa, rua, telefone, orgExp, municipio, cpf, rg, sus, sexo, queixa, prioridade;
 	private String data_nascimento;
-	private int numero_casa, id;
+	private int  id;
 	
 	
 	
@@ -16,7 +16,7 @@ public class Paciente {
 	}
 
 	public Paciente(String nome, String rua, String telefone, String orgExp, String municipio, String cpf, String rg,
-			String sus, String sexo, String queixa, String data_nascimento, int numero_casa) {
+			String sus, String sexo, String queixa, String data_nascimento, String numero_casa) {
 		super();
 		this.nome = nome;
 		this.rua = rua;
@@ -120,11 +120,11 @@ public class Paciente {
 		this.data_nascimento = data_nascimento;
 	}
 
-	public int getNumero_casa() {
+	public String getNumero_casa() {
 		return numero_casa;
 	}
 
-	public void setNumero_casa(int numero_casa) {
+	public void setNumero_casa(String numero_casa) {
 		this.numero_casa = numero_casa;
 	}
 

@@ -31,7 +31,7 @@ public class DAOPaciente implements IDAOPaciente{
 			statement.setString(7, paciente.getCpf());
 			statement.setString(8, paciente.getSus());
 			statement.setString(9, paciente.getRua());
-			statement.setInt(10, paciente.getNumero_casa());
+			statement.setString(10, paciente.getNumero_casa());
 			statement.setString(11, paciente.getSexo());
 			statement.setString(12, paciente.getQueixa());
 			
@@ -61,7 +61,7 @@ public class DAOPaciente implements IDAOPaciente{
                 String cpf= result.getString(7);
                 String sus = result.getString(8);
                 String rua = result.getString(9);
-                Integer numero = result.getInt(10);
+                String numero = result.getString(10);
                 String sexo = result.getString(11);
                 String queixa = result.getString(12);
                 paciente = new Paciente(id);
@@ -104,7 +104,7 @@ public class DAOPaciente implements IDAOPaciente{
                    String cpf= result.getString(7);
                    String sus = result.getString(8);
                    String rua = result.getString(9);
-                   Integer numero = result.getInt(10);
+                   String numero = result.getString(10);
                    String sexo = result.getString(11);
                    String queixa = result.getString(12);
                    paciente = new Paciente(nome, rua, telefone, orgãoExpedidor, municipio, cpf, rg, sus, sexo, queixa, data, numero);
