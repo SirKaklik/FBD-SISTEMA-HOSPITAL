@@ -14,11 +14,11 @@ public class TelaPacientes extends JFrame{
 	
 	JButton voltarBttn;
 	JComboBox<String> ID;
-	JLabel tipoSangLabel, nomeLabel, telefoneLabel, CEPLabel, dataNascLabel, problemasLabel, AlergiaLabel, xLabel, fundoLabel;
+	JLabel tipoSangLabel, nomeLabel, telefoneLabel, dataNascLabel, problemasLabel, AlergiaLabel, fundoLabel;
 	
 	
 	
-	public TelaPacientes() throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException {
+	public TelaPacientes(){
 		super("Paciente");
 		setSize(520, 400);
 		setLocationRelativeTo(null);
@@ -30,43 +30,27 @@ public class TelaPacientes extends JFrame{
 		
 		ID = new JComboBox<String>();
 		ID.setBounds(240, 2, 150, 30);
-		
-		tipoSangLabel = new JLabel("AB");
-		tipoSangLabel.setBounds(418, 264, 200, 20);
-		
+
 		nomeLabel = new JLabel("NOME");
 		nomeLabel.setBounds(47, 42, 200, 20);
 		
 		telefoneLabel = new JLabel("11111111111");
 		telefoneLabel.setBounds(30, 82, 200, 20);
 		
-		CEPLabel = new JLabel("11111-111");
-		CEPLabel.setBounds(140, 82, 200, 20);
-		
 		dataNascLabel = new JLabel("11/11/1111");
 		dataNascLabel.setBounds(74, 107, 200, 20);
 		
 		problemasLabel = new JLabel("NADA");
-		problemasLabel.setBounds(27, 162, 200, 20);
-		
-		AlergiaLabel = new JLabel("NADA");
-		AlergiaLabel.setBounds(24, 262, 200, 20);
-		
-		xLabel = new JLabel("X");
-		xLabel.setFont(new Font("Arial", Font.PLAIN, 10));
+		problemasLabel.setBounds(27, 115, 200, 180);
 		
 		voltarBttn = new JButton("Voltar");
-		voltarBttn.setBounds(200, 320, 100, 30);
+		voltarBttn.setBounds(200, 330, 100, 30);
 		
 		add(ID);
 		add(nomeLabel);
-		add(CEPLabel);
-		add(AlergiaLabel);
 		add(dataNascLabel);
 		add(telefoneLabel);
 		add(problemasLabel);
-		add(tipoSangLabel);
-		add(xLabel);
 		add(voltarBttn);
 	
 		setVisible(false);
@@ -97,13 +81,6 @@ public class TelaPacientes extends JFrame{
 	}
 
 
-
-	public JLabel getCEPLabel() {
-		return CEPLabel;
-	}
-
-
-
 	public JLabel getDataNascLabel() {
 		return dataNascLabel;
 	}
@@ -119,13 +96,6 @@ public class TelaPacientes extends JFrame{
 	public JLabel getAlergiaLabel() {
 		return AlergiaLabel;
 	}
-
-
-
-	public JLabel getxLabel() {
-		return xLabel;
-	}
-
 
 
 	public JLabel getFundoLabel() {

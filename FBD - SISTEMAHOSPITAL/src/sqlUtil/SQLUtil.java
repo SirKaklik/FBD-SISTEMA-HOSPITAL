@@ -94,4 +94,14 @@ public class SQLUtil {
                 NOME_TABELA+" as a;";
 	}
 	
+	public static class Laudo{
+		private static String NOME_TABELA = "laudo";
+		private static String COL_LAUDO = "laudo";
+		
+		public static String INSERT_ALL = "INSERT INTO "+ NOME_TABELA +" ("+COL_LAUDO+") values (?)";
+		public static String SELECT_BY_ID =  "SELECT laudo.laudo FROM "+
+	                NOME_TABELA+" laudo WHERE ID = ?";
+		public static String SELECT_ALL =  "SELECT a.laudo FROM "+
+	                NOME_TABELA+" as a;";
+	}
 }

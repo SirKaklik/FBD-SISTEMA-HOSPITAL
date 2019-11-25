@@ -6,16 +6,19 @@ import exceptions.ExceptionGeral;
 import model.Atendente;
 import model.Auxiliares;
 import model.Consulta;
+import model.Laudo;
 import model.Medico;
 import model.Paciente;
 import model.business.BusinessAtendente;
 import model.business.BusinessAuxiliares;
 import model.business.BusinessConsulta;
+import model.business.BusinessLaudo;
 import model.business.BusinessMedico;
 import model.business.BusinessPaciente;
 import model.business.IBusinessAtendente;
 import model.business.IBusinessAuxiliares;
 import model.business.IBusinessConsulta;
+import model.business.IBusinessLaudo;
 import model.business.IBusinessMedico;
 import model.business.IBusinessPaciente;
 
@@ -26,6 +29,7 @@ public class Fachada implements IFachada{
 	private IBusinessConsulta businessConsulta;
 	private IBusinessMedico businessMedico;
 	private IBusinessPaciente businessPaciente;
+	private IBusinessLaudo businessLaudo;
 	
 	private static Fachada instance;
 	
@@ -35,6 +39,7 @@ public class Fachada implements IFachada{
 		businessConsulta = new BusinessConsulta();
 		businessMedico = new BusinessMedico();
 		businessPaciente = new BusinessPaciente();
+		businessLaudo = new BusinessLaudo();
 	}
 	
 	public static Fachada getInstance() {
@@ -114,6 +119,26 @@ public class Fachada implements IFachada{
 	@Override
 	public ArrayList<Paciente> getAllPaciente() throws ExceptionGeral {
 		return businessPaciente.getAll();
+	}
+
+	@Override
+	public boolean salvarEditarLaudo(Laudo laudo) {
+		return businessLaudo.salvarEditar(laudo);
+	}
+
+	@Override
+	public Laudo buscarIDLaudo(int id) throws ExceptionGeral {
+		return businessLaudo.buscarID(id);
+	}
+
+	@Override
+	public ArrayList<Laudo> getAllLaudo() throws ExceptionGeral {
+		return businessLaudo.getAll();
+	}
+
+	@Override
+	public ArrayList<Medico> getAllMedico() throws ExceptionGeral {
+		return businessMedico.getAll();
 	}
 
 }

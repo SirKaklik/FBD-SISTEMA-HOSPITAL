@@ -19,7 +19,7 @@ public class TelaLogin extends JFrame {
 	JTextField loginField;
 	JPasswordField senhaField;
 	
-	public TelaLogin() throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException {
+	public TelaLogin(){
 		super("Login");
 		setSize(386, 200);
 		setLocationRelativeTo(null);

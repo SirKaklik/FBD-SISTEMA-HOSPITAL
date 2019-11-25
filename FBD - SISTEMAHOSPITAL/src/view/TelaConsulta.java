@@ -28,7 +28,7 @@ public class TelaConsulta extends JFrame{
 	private JComboBox<String> estados, ano, mes, dia;
 	private JButton salvarBttn, cancelarBttn, limparBttn;
 
-	public TelaConsulta() throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException, ParseException {
+	public TelaConsulta() {
 		super("Consulta");
 		setSize(520, 400);
 		setLocationRelativeTo(null);

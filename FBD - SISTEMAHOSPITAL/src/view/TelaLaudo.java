@@ -18,7 +18,7 @@ public class TelaLaudo extends JFrame{
 	private JComboBox<String> ID;
 	private JTextArea area;
 	
-	public TelaLaudo() throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException {
+	public TelaLaudo() {
 		super("Laudo médico");
 		setSize(520, 400);
 		setLocationRelativeTo(null);
@@ -33,9 +33,6 @@ public class TelaLaudo extends JFrame{
 		area.setWrapStyleWord(true);
 		area.setBounds(10, 153, 500, 150);
 		
-		infoGeral = new JButton("Todas as Informações");
-		infoGeral.setBounds(0, 2, 170, 30);
-		
 		ID = new JComboBox<String>();
 		ID.setBounds(240, 2, 150, 30);
 		
@@ -44,9 +41,6 @@ public class TelaLaudo extends JFrame{
 		
 		telefoneLabel = new JLabel("11111111111");
 		telefoneLabel.setBounds(30, 82, 200, 20);
-		
-		CEPLabel = new JLabel("11111-111");
-		CEPLabel.setBounds(140, 82, 200, 20);
 		
 		dataNascLabel = new JLabel("11/11/1111");
 		dataNascLabel.setBounds(74, 107, 200, 20);
@@ -60,14 +54,11 @@ public class TelaLaudo extends JFrame{
 		
 		add(ID);
 		add(nomeLabel);
-		add(CEPLabel);
-		add(infoGeral);
 		add(dataNascLabel);
 		add(telefoneLabel);
 		add(area);
 		add(salvarBttn);
 		add(cancelarBttn);
-		add(limparBttn);
 		
 		setVisible(false);
 	}

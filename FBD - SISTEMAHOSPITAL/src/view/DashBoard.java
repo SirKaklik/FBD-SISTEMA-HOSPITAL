@@ -16,12 +16,12 @@ public class DashBoard extends JFrame {
 	
 	JPanel tempoPanel, tituloPanel, infoPanel, funcionariosPanel, pacientesPanel, opsPanel;
 	JLabel fotoLabel, tempoMedioLabel, tempoBaixoLabel, totalPacientesAtendidosLabel,
-	numeroTotalPacientesAtendidosLabel, funcionariosDisponiveisLabel, numeroFuncionariosDisponivesLabel, mediaTempoLabel, numeroMediaTempoLabel, medicoDispLabel, medicoBooleanLabel, fundoLabel;
-	JButton voltarBttn, funcionarioBttn, consultaBttn, triagemBttn, pacientesBttn, laudoBttn;
+	numeroTotalPacientesAtendidosLabel, funcionariosDisponiveisLabel, numeroFuncionariosDisponivesLabel, mediaTempoLabel, numeroMediaTempoLabel, fundoLabel;
+	JButton voltarBttn, funcionarioBttn, consultaBttn, pacientesBttn, laudoBttn, medFuncionarioBttn, cadastrarMedico, cadastrarEnfermeira, cadastrarAtendente;
 	
 	
 	
-	public DashBoard() throws ClassNotFoundException, InstantiationException, IllegalAccessException, UnsupportedLookAndFeelException {
+	public DashBoard() {
 		super("Dashboard Hospital");
 		setSize(800, 600);
 		setLocationRelativeTo(null);
@@ -90,9 +90,15 @@ public class DashBoard extends JFrame {
 		voltarBttn = new JButton("Voltar");
 		funcionarioBttn = new JButton("Funcionario");
 		consultaBttn = new JButton("Consulta");
-		triagemBttn = new JButton("Triagem");
 		pacientesBttn = new JButton("Pacientes");
 		laudoBttn = new JButton("Laudo");
+		medFuncionarioBttn = new JButton("Funcionario");
+		cadastrarMedico = new JButton("Cadastrar Medico");
+		cadastrarMedico.setFont(new Font("Arial", Font.PLAIN, 10));
+		cadastrarAtendente = new JButton("Cadastrar Atendente");
+		cadastrarAtendente.setFont(new Font("Arial", Font.PLAIN, 10));
+		cadastrarEnfermeira = new JButton("Cadastrar Enfermeira");
+		cadastrarEnfermeira.setFont(new Font("Arial", Font.PLAIN, 10));
 		
 		funcionariosDisponiveisLabel = new JLabel("Enfermeiras disponiveis:");
 		funcionariosDisponiveisLabel.setBounds(40, 40, 300, 30);
@@ -104,16 +110,6 @@ public class DashBoard extends JFrame {
 		numeroFuncionariosDisponivesLabel.setFont(new Font("Arial", Font.BOLD, 20));
 		numeroFuncionariosDisponivesLabel.setForeground(Color.white);
 		
-		medicoDispLabel = new JLabel("Médico disponivel? ");
-		medicoDispLabel.setBounds(75, 200, 300, 30);
-		medicoDispLabel.setFont(new Font("Arial", Font.BOLD, 20));
-		medicoDispLabel.setForeground(Color.white);
-		
-		medicoBooleanLabel = new JLabel("Sim");
-		medicoBooleanLabel.setBounds(150, 250, 100, 30);
-		medicoBooleanLabel.setFont(new Font("Arial", Font.BOLD, 20));
-		medicoBooleanLabel.setForeground(Color.white);
-		
 		////////////////////////////////////////////////
 		add(tempoPanel);
 		tempoPanel.add(tempoBaixoLabel);
@@ -122,8 +118,6 @@ public class DashBoard extends JFrame {
 		add(funcionariosPanel);
 		funcionariosPanel.add(funcionariosDisponiveisLabel);
 		funcionariosPanel.add(numeroFuncionariosDisponivesLabel);
-		funcionariosPanel.add(medicoDispLabel);
-		funcionariosPanel.add(medicoBooleanLabel);
 		
 		add(tituloPanel);
 		tituloPanel.add(totalPacientesAtendidosLabel);
@@ -135,9 +129,11 @@ public class DashBoard extends JFrame {
 		add(opsPanel);
 		opsPanel.add(funcionarioBttn);
 		opsPanel.add(consultaBttn);
-		opsPanel.add(triagemBttn);
 		opsPanel.add(pacientesBttn);
 		opsPanel.add(laudoBttn);
+		opsPanel.add(cadastrarAtendente);
+		opsPanel.add(cadastrarEnfermeira);
+		opsPanel.add(cadastrarMedico);
 		opsPanel.add(voltarBttn);
 		////////////////////////////////////////////////
 		
@@ -253,13 +249,6 @@ public class DashBoard extends JFrame {
 	}
 
 
-
-	public JButton getTriagemBttn() {
-		return triagemBttn;
-	}
-
-
-
 	public JButton getPacientesBttn() {
 		return pacientesBttn;
 	}
@@ -271,21 +260,32 @@ public class DashBoard extends JFrame {
 	}
 
 
-
-	public JLabel getMedicoDispLabel() {
-		return medicoDispLabel;
-	}
-
-
-
-	public JLabel getMedicoBooleanLabel() {
-		return medicoBooleanLabel;
-	}
-
-
-
 	public JLabel getFundoLabel() {
 		return fundoLabel;
+	}
+
+
+
+	public JButton getMedFuncionarioBttn() {
+		return medFuncionarioBttn;
+	}
+
+
+
+	public JButton getCadastrarMedico() {
+		return cadastrarMedico;
+	}
+
+
+
+	public JButton getCadastrarEnfermeira() {
+		return cadastrarEnfermeira;
+	}
+
+
+
+	public JButton getCadastrarAtendente() {
+		return cadastrarAtendente;
 	}
 
 }

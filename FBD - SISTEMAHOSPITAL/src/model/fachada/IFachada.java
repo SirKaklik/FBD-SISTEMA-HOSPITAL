@@ -6,6 +6,7 @@ import exceptions.ExceptionGeral;
 import model.Atendente;
 import model.Auxiliares;
 import model.Consulta;
+import model.Laudo;
 import model.Medico;
 import model.Paciente;
 
@@ -33,12 +34,18 @@ public interface IFachada {
 	
 	public boolean salvarEditarMedico(Medico medico);
 	public Medico buscarIDMedico(int id) throws ExceptionGeral;
+	public ArrayList<Medico> getAllMedico() throws ExceptionGeral;
 	
 	//Paciente
 	
 	public boolean salvarEditarPaciente(Paciente paciente);
 	public Paciente buscarIDPaciente(int id) throws ExceptionGeral;
 	public ArrayList<Paciente> getAllPaciente() throws ExceptionGeral;
+	
+	//Laudo
+	public boolean salvarEditarLaudo(Laudo laudo);
+	public Laudo buscarIDLaudo(int id) throws ExceptionGeral;
+	public ArrayList<Laudo> getAllLaudo() throws ExceptionGeral;
 	
 }
 
